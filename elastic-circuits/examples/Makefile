@@ -68,8 +68,9 @@ test: $(BUILDDIR)
 
 #-$(OPT) -load ../_build/MemElemInfo/libLLVMMemElemInfo.so -load ../_build/ElasticPass/libElasticPass.so -load ../_build/OptimizeBitwidth/libLLVMOptimizeBitWidth.so -load ../_build/MyCFGPass/libMyCFGPass.so -polly-process-unprofitable -mycfgpass  $(BUILDDIR_FILE)/$(name)_mem2reg_constprop_simplifycfg_die.ll -S -cfg-outdir=$(BUILDDIR_FILE) -use-lsq=false -simple-buffers=true
 
-	-$(OPT) -load ../_build/MemElemInfo/libLLVMMemElemInfo.so -load ../_build/ElasticPass/libElasticPass.so -load ../_build/OptimizeBitwidth/libLLVMOptimizeBitWidth.so -load ../_build/MyCFGPass/libMyCFGPass.so -polly-process-unprofitable -mycfgpass  $(BUILDDIR_FILE)/$(name)_mem2reg_constprop_simplifycfg_die.ll -S -cfg-outdir=$(BUILDDIR_FILE)
+	#-$(OPT) -load ../_build/MemElemInfo/libLLVMMemElemInfo.so -load ../_build/ElasticPass/libElasticPass.so -load ../_build/OptimizeBitwidth/libLLVMOptimizeBitWidth.so -load ../_build/MyCFGPass/libMyCFGPass.so -polly-process-unprofitable -mycfgpass  $(BUILDDIR_FILE)/$(name)_mem2reg_constprop_simplifycfg_die.ll -S -cfg-outdir=$(BUILDDIR_FILE)
 
+	-$(OPT) -load ../_build/MemElemInfo/libLLVMMemElemInfo.so -load ../_build/ElasticPass/libElasticPass.so -load ../_build/OptimizeBitwidth/libLLVMOptimizeBitWidth.so -load ../_build/MyCFGPass/libMyCFGPass.so -polly-process-unprofitable -mycfgpass  $(BUILDDIR_FILE)/$(name)_mem2reg_constprop_simplifycfg_die.ll -S -cfg-outdir=$(BUILDDIR_FILE) -simple-buffers=true
 
 	#mv print.txt $(BUILDDIR_FILE) || true
 	#mv *_graph.dot $(BUILDDIR_FILE)
